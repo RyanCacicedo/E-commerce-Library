@@ -13,7 +13,7 @@ const Book = ({ book }) => {
 
   useEffect(() => {
     const image = new Image();
-    image.src = book.url;
+    img.src = book.url;
     image.onLoad = () => {
       setTimeout(() => {
         if (mountedRef.current) {
