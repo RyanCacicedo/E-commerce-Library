@@ -13,16 +13,13 @@ const Book = ({ book }) => {
 
   useEffect(() => {
     const image = new Image();
-    img.src = book.url;
-    image.onLoad = () => {
+    image.src = book.url;
+    image.onload = () => {
       setTimeout(() => {
-        if (mountedRef.current) {
           setImg(image);
-        }
       }, 300);
     };
     return () => {
-      // When the component unmounts
       mountedRef.current = false;
     };
   });
